@@ -1,0 +1,27 @@
+/target/
+
+# Netbeans project files
+/nbactions.xml
+/nb-configuration.xml
+
+# IDEA project files
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# GlassFish
+/src/main/webapp/WEB-INF/glassfish-web.xml
+
+# Mac
+.DS_Store
+
+# Eclipse project files
+.project
+.classpath
+.settings/
+.metadata/
+
+# Generated eclipse files
+feature.xml
+feature.properties

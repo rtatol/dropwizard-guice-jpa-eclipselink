@@ -1,0 +1,22 @@
+server:
+  applicationConnectors:
+    - type: http
+      port: 18080
+  adminConnectors:
+    - type: http
+      port: 18081
+
+logging:
+  level: INFO
+  loggers:
+    com.example.dw: DEBUG
+  appenders:
+    - type: console
+
+message: "hello"
+
+dbConfig:
+    driver: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/dw_el?zeroDateTimeBehavior=convertToNull&amp;useUnicode=true&amp;characterEncoding=UTF-8
+    username: dw_el
+    password: dw_el
