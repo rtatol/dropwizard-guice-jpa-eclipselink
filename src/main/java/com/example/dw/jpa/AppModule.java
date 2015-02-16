@@ -2,7 +2,7 @@ package com.example.dw.jpa;
 
 import com.example.dw.jpa.config.Config;
 import com.example.dw.jpa.dao.Dao;
-import com.example.dw.jpa.dao.DefaultDao;
+import com.example.dw.jpa.dao.DaoImpl;
 import com.example.dw.jpa.service.PlayerService;
 import com.example.dw.jpa.service.ScoreService;
 import com.google.inject.AbstractModule;
@@ -22,7 +22,7 @@ public class AppModule extends AbstractModule {
     protected void configure() {
         bind(Config.class).toInstance(configuration);
         bind(Environment.class).toInstance(environment);
-        bind(Dao.class).to(DefaultDao.class);
+        bind(Dao.class).to(DaoImpl.class);
         bind(PlayerService.class);
         bind(ScoreService.class);
     }

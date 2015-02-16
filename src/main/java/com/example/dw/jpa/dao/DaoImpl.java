@@ -9,14 +9,14 @@ import javax.persistence.EntityManager;
 import javax.persistence.Query;
 
 @Transactional
-public class DefaultDao implements Dao {
+public class DaoImpl implements Dao {
 
     private static final String QUERY_SELECT_ALL = "SELECT o FROM %s o ORDER BY o.id";
 
     private final Provider<EntityManager> entityManager;
 
     @Inject
-    public DefaultDao(final Provider<EntityManager> entityManager) {
+    public DaoImpl(final Provider<EntityManager> entityManager) {
         this.entityManager = entityManager;
     }
 
