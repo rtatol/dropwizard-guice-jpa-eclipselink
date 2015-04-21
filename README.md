@@ -7,7 +7,7 @@ Sample REST application written with:
 - Google Guice DI
 - Google Guice-Persist extension
 - EclipseLink ORM as implementation of JPA 2.1
-- PostgreSql as database
+- H2 as database
 - JDK 1.8
 
 ###### QuickStart
