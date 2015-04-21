@@ -10,7 +10,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <dropwizard.version>0.7.1</dropwizard.version>
+        <dropwizard.version>0.8.1</dropwizard.version>
         <guice.version>3.0</guice.version>
         <eclipselink.version>2.5.2</eclipselink.version>
     </properties>
@@ -45,6 +45,11 @@
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
             <version>9.4-1200-jdbc41</version>
+        </dependency>
+		<dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>1.4.182</version>
         </dependency>
     </dependencies>
     
