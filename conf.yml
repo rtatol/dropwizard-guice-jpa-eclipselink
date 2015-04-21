@@ -16,7 +16,7 @@ logging:
 message: "hello"
 
 dbConfig:
-    driver: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/dw_el?zeroDateTimeBehavior=convertToNull&amp;useUnicode=true&amp;characterEncoding=UTF-8
-    username: dw_el
-    password: dw_el
+    driver: org.h2.Driver
+    url: jdbc:h2:~/example;DB_CLOSE_DELAY=-1;AUTO_RECONNECT=TRUE;DB_CLOSE_ON_EXIT=FALSE
+    username: sa
+    password: 
