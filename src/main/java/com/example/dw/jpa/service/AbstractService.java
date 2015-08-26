@@ -1,9 +1,10 @@
 package com.example.dw.jpa.service;
 
 import com.example.dw.jpa.dao.Dao;
-import com.google.common.reflect.TypeToken;
-import java.util.List;
+import io.dropwizard.util.Generics;
+
 import javax.inject.Inject;
+import java.util.List;
 
 public abstract class AbstractService<T> {
 
@@ -13,7 +14,7 @@ public abstract class AbstractService<T> {
     protected final Class<T> entityClass;
 
     public AbstractService() {
-        entityClass = (Class<T>) TypeToken.of(getClass()).resolveType(AbstractService.class.getTypeParameters()[0]).getRawType();
+        this.entityClass = (Class<T>) Generics.getTypeParameter(getClass());
     }
 
     public void save(final T object) {
