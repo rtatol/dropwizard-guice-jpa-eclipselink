@@ -43,12 +43,13 @@
     </plugins>
   </build>
   <properties>
-    <guice.version>3.0</guice.version>
-    <dropwizard.version>0.8.1</dropwizard.version>
+    <h2.version>1.4.189</h2.version>
+    <guice.version>4.0</guice.version>
+    <dropwizard.version>0.8.4</dropwizard.version>
     <maven.compiler.source>1.8</maven.compiler.source>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.target>1.8</maven.compiler.target>
-    <eclipselink.version>2.5.2</eclipselink.version>
+    <eclipselink.version>2.6.0</eclipselink.version>
   </properties>
 </project>
 
