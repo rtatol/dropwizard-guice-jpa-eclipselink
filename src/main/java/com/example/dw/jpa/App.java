@@ -11,6 +11,7 @@ import com.google.inject.persist.jpa.JpaPersistModule;
 import io.dropwizard.Application;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
+
 import java.util.Properties;
 
 public class App extends Application<Config> {

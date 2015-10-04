@@ -2,11 +2,12 @@ package com.example.dw.jpa.dao;
 
 import com.google.inject.Provider;
 import com.google.inject.persist.Transactional;
-import java.util.List;
-import java.util.Map;
+
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
+import java.util.List;
+import java.util.Map;
 
 @Transactional
 public class DaoImpl implements Dao {
@@ -47,7 +48,8 @@ public class DaoImpl implements Dao {
 
     @Override
     public <T> List<T> findAll(final Class clazz) {
-        return entityManager.get().createQuery(String.format(QUERY_SELECT_ALL, clazz.getSimpleName())).getResultList();
+        final String query = String.format(QUERY_SELECT_ALL, clazz.getSimpleName());
+        return entityManager.get().createQuery(query).getResultList();
     }
 
     @Override
@@ -58,9 +60,7 @@ public class DaoImpl implements Dao {
 
     private Query fillNamedParametersQuery(final Class clazz, final String namedQuery, final Map<String, Object> paramsMap) {
         final Query query = entityManager.get().createNamedQuery(namedQuery, clazz);
-        paramsMap.entrySet().stream().forEach((param) -> {
-            query.setParameter(param.getKey(), param.getValue());
-        });
+        paramsMap.entrySet().forEach((param) -> query.setParameter(param.getKey(), param.getValue()));
         return query;
     }
 }

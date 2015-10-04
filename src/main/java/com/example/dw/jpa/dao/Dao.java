@@ -5,18 +5,18 @@ import java.util.Map;
 
 public interface Dao {
 
-    public <T> void persist(final T object);
+    <T> void persist(T object);
 
-    public <T, ID> T findById(final Class<T> clazz, final ID id);
+    <T, ID> T findById(Class<T> clazz, ID id);
 
-    public <T> T merge(final T object);
+    <T> T merge(T object);
 
-    public <T> void remove(final T object);
+    <T> void remove(T object);
 
-    public <T, ID> void removeById(final Class<T> clazz, final ID id);
+    <T, ID> void removeById(Class<T> clazz, ID id);
 
-    public <T> List<T> findAll(final Class clazz);
+    <T> List<T> findAll(Class clazz);
 
-    public <T> List<T> find(final Class<T> clazz, final String namedQuery, final Map<String, Object> paramsMap);
+    <T> List<T> find(Class<T> clazz, String namedQuery, Map<String, Object> paramsMap);
 
 }
