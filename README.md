@@ -2,6 +2,8 @@ dropwizard-guice-jpa-eclipselink
 =========================
 
 [![Build Status](https://travis-ci.org/rtatol/dropwizard-guice-jpa-eclipselink.svg)](https://travis-ci.org/rtatol/dropwizard-guice-jpa-eclipselink)
+[![Dependency Status](https://www.versioneye.com/user/projects/561109b1a19334001e000018/badge.svg?style=flat)](https://www.versioneye.com/user/projects/561109b1a19334001e000018)
+
 
 Sample REST application written with:
 
